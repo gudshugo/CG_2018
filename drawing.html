@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Drawing Forms CG</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/utils.css">
+  <link rel="stylesheet" href="./css/sidebar.css">
+</head>
+
+<body>
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#">Drawing Forms CG</a>
+		    </div>
+		    <ul class="nav navbar-nav navbar-right">
+    			<button type="button" id="draw_point" class="btn btn-primary" style="margin-top:10px; margin-right:10px" id="draw_point" onclick="newPoint()">Point</button>
+
+    			<button type="button" id="draw_line" class="btn btn-primary" style="margin-top:10px; margin-right:10px" id="draw_line"  onclick="newLine()">Line</button>    			
+
+    			<button type="button" id="draw_arc" class="btn btn-warning" style="margin-top:10px; margin-right:10px" id="draw_arc" onclick="newArc()">Arc</button>    	
+
+    			<button type="button" id="draw_bezier" class="btn btn-warning" style="margin-top:10px; margin-right:10px" id="draw_bezier" onclick="newBezier()">Bezier</button>     			
+
+    			<button type="button" id="draw_polygon" class="btn btn-success" style="margin-top:10px; margin-right:10px" id="draw_polygon" onclick="newArea()" >Polygon</button> 
+
+		       	<input type="button" id="uploadFile" class="btn btn-primary" style="margin-top:10px; margin-right:10px" id="get_file" value="Upload File">
+				<input type="file" id="getFile" style="display:none; background: #f9f9f9; border: 5px solid #88c; padding: 15px; border-radius: 5px; margin: 10px;
+    			cursor: pointer;" onchange="pegaCSV(this)">
+
+		    </ul>
+		  </div>
+		</nav>
+
+		<div id="CSVsaida"></div>
+
+		<aside id="sticky-social">
+		    <ul>
+		        <li><a type="button" class="entypo-arrows-ccw" target="_blank"><span>Rotate</span></a></li>
+		        <li><a type="button" class="entypo-docs" target="_blank"><span>Mirrow</span></a></li>
+		        <li><a type="button" onclick="scaleFlag()" class="entypo-resize-full" target="_blank"><span>Scale</span></a></li>
+ 		        <li><a type="button" onclick="refresh()" class="entypo-trash" target="_blank"><span>Clean</span></a></li>
+		    </ul>
+		</aside>
+
+
+		<canvas id="canvasDoPoder" style="border:1px solid #000000; margin-left:350px; margin-top: -4px"; width="700" height="600"></canvas>
+
+
+</body>
+</html>
+
+<script type="text/javascript" src="./js/jsUpload/drawingFromFile.js"></script>
+<script type="text/javascript" src="./js/jsUtils/utils.js"></script>
+<script type="text/javascript" src="./js/jsMain/main.js"></script>
+<script type="text/javascript" src="./js/jsMouse/mouse.js"></script>
+<script type="text/javascript" src="./js/jsForms/point.js"></script>
+<script type="text/javascript" src="./js/jsForms/line.js"></script>
+<script type="text/javascript" src="./js/jsForms/arc.js"></script>
+<script type="text/javascript" src="./js/jsForms/bezier.js"></script>
+<script type="text/javascript" src="./js/jsForms/polygon.js"></script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
