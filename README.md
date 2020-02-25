@@ -1,1 +1,1 @@
-# cg2018.github.io
+Academic project carried out during the course of computer graphics. The aim of the project is to apply computer graphics concepts such as 3D planes and geometric shapes on a simple canvas. Use of JavaScript to implement the project.
